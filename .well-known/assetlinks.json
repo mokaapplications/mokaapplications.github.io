@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.moka.weeklymeals",
+      "sha256_cert_fingerprints": [
+        "80:27:A6:C8:05:00:11:85:A2:43:8E:45:D3:C5:24:D8:5F:CE:5A:D3:56:AB:6F:58:B5:ED:EC:88:D2:93:2D:BA",
+        "CE:B4:ED:F1:61:46:B1:02:57:8F:6D:2A:52:79:9B:3B:3D:14:12:5B:A5:B3:95:D7:58:D4:99:85:48:B0:06:5E"
+      ]
+    }
+  }
+]

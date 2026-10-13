@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Weekly Meals Sync</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:#f6f4ef;color:#26302b;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;min-height:100vh;margin:0;padding:24px;text-align:center;
+  }
+  p{ max-width:320px; line-height:1.5; color:#6b7a71; }
+  a.open-btn{
+    display:inline-block;margin-top:16px;padding:12px 24px;background:#2f6b4f;color:#fff;
+    border-radius:10px;text-decoration:none;font-weight:600;
+  }
+</style>
+</head>
+<body>
+  <h2>Opening Weekly Meals…</h2>
+  <p>You're only seeing this page because the app couldn't be opened directly - make sure Weekly Meals is installed, then tap below.</p>
+  <a class="open-btn" id="openBtn" href="#">Open in Weekly Meals</a>
+  <script>
+    var params = new URLSearchParams(window.location.search);
+    var data = params.get("data");
+    var deepLink = "weeklymeals://sync" + (data ? ("?data=" + data) : "");
+    document.getElementById("openBtn").href = deepLink;
+    // best-effort - a no-op if nothing on this device is registered to
+    // handle the custom scheme; the button above still works either way
+    window.location.href = deepLink;
+  </script>
+</body>
+</html>
